@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::post('/register', 'Api\RegisterController@register');
 Route::post('/login', 'Api\RegisterController@login');
 
+Route::post('/admin-register', 'Api\AdminRegistrationController@register');
+Route::post('/admin-login', 'Api\AdminRegistrationController@login');
+
 Route::middleware('auth:api')->namespace('Api')->group(function () {
     Route::get('/products', 'ProductController@products');
 });
