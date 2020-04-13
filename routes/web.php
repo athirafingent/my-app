@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// use Illuminate\Support\Facades\Redis; 
+
+Route::get('/', function () { 
+    print_r(app()->make('redis'));
+    //  $visits = Redis::incr('visits'); 
+    //  return $visits; 
 });
